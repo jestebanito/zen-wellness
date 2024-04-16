@@ -49,7 +49,8 @@ function zen_wellness_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'zen-wellness' ),
+			'header' => esc_html__( 'Header Menu Location', 'zen-wellness' ),
+			'footer' => esc_html__( 'Footer Menu Location', 'zen-wellness' ),
 		)
 	);
 
@@ -115,26 +116,6 @@ function zen_wellness_content_width() {
 add_action( 'after_setup_theme', 'zen_wellness_content_width', 0 );
 
 /**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function zen_wellness_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'zen-wellness' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'zen-wellness' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'zen_wellness_widgets_init' );
-
-/**
  * Enqueue scripts and styles.
  */
 function zen_wellness_scripts() {
@@ -168,6 +149,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Register CPTs and Taxonomies
+ */
+require get_template_directory() . '/inc/cpt-taxonomy.php';
 
 /**
  * Load Jetpack compatibility file.

@@ -1,6 +1,6 @@
 <?php
-function zen_wellness_register_custom_post_types()
-{
+function zen_wellness_register_custom_post_types() {
+    
     // Register Team
     $labels = array(
         'name'               => _x('Team', 'post type general name'),

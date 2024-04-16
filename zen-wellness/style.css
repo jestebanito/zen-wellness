@@ -72,20 +72,24 @@ html {
 }
 
 /* Sections
-	 ========================================================================== */
+========================================================================== */
 
 /**
- * Remove the margin in all browsers.
- */
+* Remove the margin in all browsers.
+*/
 body {
 	margin: 0;
 }
 
 /**
- * Render the `main` element consistently in IE.
- */
+* Render the `main` element consistently in IE.
+*/
 main {
 	display: block;
+}
+
+#page {
+	background-color: #F9FAFB;
 }
 
 /**
@@ -739,6 +743,31 @@ textarea {
 .post-navigation .nav-next {
 	text-align: end;
 	flex: 1 0 50%;
+}
+
+.main-nav ul {
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	padding: 0;
+	margin: 0 1rem;
+}
+
+.main-nav li {
+	list-style-type: none;
+	background-color: #FFFFFF;
+	width: 14rem;
+	text-align: center;
+	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.main-nav li div {
+	background-color: #734F96;
+}
+
+.main-nav li a {
+	text-decoration: none;
+	color: #FFFFFF;
 }
 
 /* Posts and pages
