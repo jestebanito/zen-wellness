@@ -392,6 +392,7 @@ template {
 
 html {
 	box-sizing: border-box;
+	margin-top: 0 !important;
 }
 
 /*--------------------------------------------------------------
@@ -479,6 +480,12 @@ body {
 	background: #fff;
 }
 
+header#masthead.site-header {
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+}
+
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -550,9 +557,9 @@ a:active {
 	color: #191970;
 }
 
-a:focus {
+/* a:focus {
 	outline: thin dotted;
-}
+} */
 
 a:hover,
 a:active {
@@ -656,6 +663,10 @@ textarea {
 	width: 100%;
 }
 
+.main-navigation a {
+	color: #FFFFFF;
+}
+
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -715,6 +726,15 @@ textarea {
 
 	.main-navigation ul {
 		display: flex;
+	}
+}
+
+@media (min-width: 580px) {
+	.main-navigation {
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		top: 50px;
 	}
 }
 
@@ -851,6 +871,10 @@ textarea {
 
 .wp-caption-text {
 	text-align: center;
+}
+
+.wp-block-cover {
+	min-height: 100vh;
 }
 
 /* Galleries
