@@ -661,6 +661,9 @@ textarea {
 .main-navigation {
 	display: block;
 	width: 100%;
+	background-color: #734F96;
+	position: fixed;
+	bottom: 0;
 }
 
 .main-navigation a {
@@ -672,6 +675,15 @@ textarea {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	position: absolute;
+	top: -104px;
+	width: 100%;
+	text-align: center;
+	padding: 1rem;
+}
+
+ul#header-menu.menu.nav-menu {
+	background: #734F96;
 }
 
 .main-navigation ul ul {
@@ -716,6 +728,8 @@ textarea {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	background: transparent;
+	border: 0;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -724,17 +738,26 @@ textarea {
 		display: none;
 	}
 
-	.main-navigation ul {
+	.main-navigation.toggled ul {
 		display: flex;
 	}
-}
 
-@media (min-width: 580px) {
+	ul#header-menu.menu.nav-menu {
+		background: transparent;
+	}
+
+	.main-navigation ul {
+		display: flex;
+		flex-direction: row;
+		top: 0;
+	}
+
 	.main-navigation {
 		display: flex;
 		justify-content: center;
 		position: absolute;
 		top: 50px;
+		background-color: transparent;
 	}
 }
 
