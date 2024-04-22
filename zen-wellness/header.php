@@ -46,10 +46,10 @@
 				<p class="site-description"><?php echo $zen_wellness_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
-
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="55" height="34" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="6" d="M24 31h28M3 17h49M3 3h49"/></svg></button>
+			<button id="menu-btn" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><svg class="disable-click" role="img" aria-label="menu-open" xmlns="http://www.w3.org/2000/svg" width="46" height="29" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="5" d="M20.143 26H43M3 14.5h40M3 3h40"/></svg></button>
 			<?php
+
 			wp_nav_menu(
 				array(
 					'theme_location' => 'header',

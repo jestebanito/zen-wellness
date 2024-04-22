@@ -676,14 +676,18 @@ textarea {
 	margin: 0;
 	padding-left: 0;
 	position: absolute;
-	top: -104px;
-	width: 100%;
+	top: -103px;
+	width: 100% !important;
 	text-align: center;
 	padding: 1rem;
 }
 
 ul#header-menu.menu.nav-menu {
 	background: #734F96;
+}
+
+.disable-click {
+	pointer-events: none;
 }
 
 .main-navigation ul ul {
@@ -730,9 +734,20 @@ ul#header-menu.menu.nav-menu {
 	display: block;
 	background: transparent;
 	border: 0;
+	float: right;
+	width: 5rem;
+}
+
+div.site-title {
+	text-align: center;
+	margin-top: -15px;
 }
 
 @media screen and (min-width: 37.5em) {
+
+	div.site-title {
+		text-align: left;
+	}
 
 	.menu-toggle {
 		display: none;
@@ -791,15 +806,23 @@ ul#header-menu.menu.nav-menu {
 .main-nav ul {
 	display: flex;
 	gap: 2rem;
-	justify-content: center;
 	padding: 0;
 	margin: 0 1rem;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media screen and (min-width: 46em) {
+	.main-nav ul {
+		justify-content: center;
+		flex-direction: row;
+	}
 }
 
 .main-nav li {
 	list-style-type: none;
 	background-color: #FFFFFF;
-	width: 14rem;
+	width: 18rem;
 	text-align: center;
 	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
 }

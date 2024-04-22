@@ -42,6 +42,18 @@
 		}
 	} );
 
+	const menuButton = document.getElementById('menu-btn');
+	let isMenuOpen = true;
+	menuButton.onclick = function() {
+		if (isMenuOpen) {
+			menuButton.innerHTML = '<svg class="disable-click" role="img" aria-label="menu-closed" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="5" d="M3 25.765 25.864 3m-22.761.202L26 26"/></svg>';
+		} else {
+			menuButton.innerHTML = '<svg class="disable-click" role="img" aria-label="menu-open" xmlns="http://www.w3.org/2000/svg" width="46" height="29" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="5" d="M20.143 26H43M3 14.5h40M3 3h40"/></svg>';
+		}
+		// Invert the state for the next click
+		isMenuOpen = !isMenuOpen;
+	};
+
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
 	document.addEventListener( 'click', function( event ) {
 		const isClickInside = siteNavigation.contains( event.target );
