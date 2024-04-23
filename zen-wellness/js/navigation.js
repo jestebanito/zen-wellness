@@ -54,6 +54,19 @@
 		isMenuOpen = !isMenuOpen;
 	};
 
+	window.addEventListener('scroll', function() {
+		const header = document.getElementById('masthead');
+		if (window.scrollY > 100) {
+		  header.classList.add('visible');
+		  header.style.backgroundColor = 'rgba(115, 79, 150)';
+		  header.style.boxShadow = '0 6px 6px rgba(0,0,0,0.25)';
+		} else {
+		  header.style.backgroundColor = 'transparent';
+		  header.style.boxShadow = 'none';
+		  header.classList.remove('visible');
+		}
+	  });
+
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
 	document.addEventListener( 'click', function( event ) {
 		const isClickInside = siteNavigation.contains( event.target );

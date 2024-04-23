@@ -747,6 +747,16 @@ div.site-title {
 
 	div.site-title {
 		text-align: left;
+		max-width: 80rem;
+		margin: 0 auto;
+	}
+
+	div.site-title a {
+		position: relative;
+		z-index: 2000;
+		display: block;
+		width: 4.5rem;
+		margin-left: 1rem;
 	}
 
 	.menu-toggle {
@@ -759,6 +769,11 @@ div.site-title {
 
 	ul#header-menu.menu.nav-menu {
 		background: transparent;
+		max-width: 20rem;
+		justify-content: space-evenly;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	.main-navigation ul {
@@ -771,9 +786,15 @@ div.site-title {
 		display: flex;
 		justify-content: center;
 		position: absolute;
-		top: 50px;
+		top: 26px;
 		background-color: transparent;
 	}
+}
+
+.site-header {
+	background-color: transparent;
+	transition: background-color 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+
 }
 
 .site-main .comment-navigation,
