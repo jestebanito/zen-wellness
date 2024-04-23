@@ -40,42 +40,61 @@
 		} else {
 			button.setAttribute( 'aria-expanded', 'true' );
 		}
-	} );
+	});
 
 	const menuButton = document.getElementById('menu-btn');
 	let isMenuOpen = true;
 	menuButton.onclick = function() {
+
 		if (isMenuOpen) {
 			menuButton.innerHTML = '<svg class="disable-click" role="img" aria-label="menu-closed" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="5" d="M3 25.765 25.864 3m-22.761.202L26 26"/></svg>';
 		} else {
 			menuButton.innerHTML = '<svg class="disable-click" role="img" aria-label="menu-open" xmlns="http://www.w3.org/2000/svg" width="46" height="29" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="5" d="M20.143 26H43M3 14.5h40M3 3h40"/></svg>';
 		}
-		// Invert the state for the next click
+		
 		isMenuOpen = !isMenuOpen;
 	};
 
-	window.addEventListener('scroll', function() {
+	function handleScroll() {
 		const header = document.getElementById('masthead');
-		const svgElement = document.getElementById('zen-wellness-logo');
-    	const paths = svgElement.querySelectorAll('path');
+		const headerMenu = document.querySelectorAll('#header-menu a');
+		const svgElement = document.querySelectorAll('#zen-wellness-logo path');
+    	// const paths = svgElement.querySelectorAll('path');
+
 		if (window.scrollY > 100) {
-		  header.classList.add('visible');
-		  header.style.backgroundColor = 'rgb(255, 255, 255)';
-		  header.style.boxShadow = '0 6px 6px rgba(0,0,0,0.25)';
+			header.classList.add('visible');
+			header.style.backgroundColor = 'rgb(255, 255, 255)';
+			header.style.boxShadow = '0 6px 6px rgba(0,0,0,0.25)';
 
-		  paths.forEach(function(path) {
-            path.style.fill = 'rgb(115, 79, 150)';
-		  });
+			if (window.matchMedia('(min-width: 37.5em)').matches) {
+				headerMenu.forEach(function(anchor) {
+					anchor.style.color = 'rgb(115, 79, 150)';
+				});
+			};
+
+			svgElement.forEach(function(path) {
+				path.style.fill = 'rgb(115, 79, 150)';
+			});
+
 		} else {
-		  header.style.backgroundColor = 'transparent';
-		  header.style.boxShadow = 'none';
-		  header.classList.remove('visible');
+			header.style.backgroundColor = 'transparent';
+			header.style.boxShadow = 'none';
+			header.classList.remove('visible');
 
-		  paths.forEach(function(path) {
-            path.style.fill = 'rgb(255, 255, 255)'; 
-        });
+			svgElement.forEach(function(path) {
+            	path.style.fill = 'rgb(255, 255, 255)'; 
+        	});
+
+			if (window.matchMedia('(min-width: 37.5em)').matches) {
+				headerMenu.forEach(function(anchor) {
+					anchor.style.color = 'rgb(255, 255, 255)';
+				});
+			}
 		}
-	  });
+	};
+
+	window.addEventListener('scroll', handleScroll);
+	window.addEventListener('resize', handleScroll);
 
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
 	document.addEventListener( 'click', function( event ) {
@@ -85,7 +104,7 @@
 			siteNavigation.classList.remove( 'toggled' );
 			button.setAttribute( 'aria-expanded', 'false' );
 		}
-	} );
+	});
 
 	// Get all the link elements within the menu.
 	const links = menu.getElementsByTagName( 'a' );
