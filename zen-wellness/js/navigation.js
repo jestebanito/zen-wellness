@@ -56,14 +56,24 @@
 
 	window.addEventListener('scroll', function() {
 		const header = document.getElementById('masthead');
+		const svgElement = document.getElementById('zen-wellness-logo');
+    	const paths = svgElement.querySelectorAll('path');
 		if (window.scrollY > 100) {
 		  header.classList.add('visible');
-		  header.style.backgroundColor = 'rgba(115, 79, 150)';
+		  header.style.backgroundColor = 'rgb(255, 255, 255)';
 		  header.style.boxShadow = '0 6px 6px rgba(0,0,0,0.25)';
+
+		  paths.forEach(function(path) {
+            path.style.fill = 'rgb(115, 79, 150)';
+		  });
 		} else {
 		  header.style.backgroundColor = 'transparent';
 		  header.style.boxShadow = 'none';
 		  header.classList.remove('visible');
+
+		  paths.forEach(function(path) {
+            path.style.fill = 'rgb(255, 255, 255)'; 
+        });
 		}
 	  });
 

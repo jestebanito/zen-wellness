@@ -786,7 +786,7 @@ div.site-title {
 		display: flex;
 		justify-content: center;
 		position: absolute;
-		top: 26px;
+		top: 20px;
 		background-color: transparent;
 	}
 }
@@ -794,7 +794,10 @@ div.site-title {
 .site-header {
 	background-color: transparent;
 	transition: background-color 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+}
 
+#zen-wellness-logo path {
+	transition: fill 0.5s ease;
 }
 
 .site-main .comment-navigation,
