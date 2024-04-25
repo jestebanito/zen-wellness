@@ -119,6 +119,15 @@ add_action( 'after_setup_theme', 'zen_wellness_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function zen_wellness_scripts() {
+
+	wp_enqueue_style(
+		'zen-wellness-font',
+		'https://fonts.googleapis.com/css2?family=Questrial&display=swap',
+		array(),
+		null, // Add null only to Google Fonts
+		'all'
+	);
+
 	wp_enqueue_style( 'zen-wellness-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'zen-wellness-style', 'rtl', 'replace' );
 
