@@ -543,19 +543,19 @@ table {
 
 /* Links
 --------------------------------------------- */
-a {
+/* a {
 	color: #4169e1;
 }
 
 a:visited {
 	color: #800080;
-}
+} */
 
-a:hover,
+/* a:hover,
 a:focus,
 a:active {
 	color: #191970;
-}
+} */
 
 /* a:focus {
 	outline: thin dotted;
@@ -667,7 +667,7 @@ textarea {
 }
 
 .main-navigation a {
-	color: #FFFFFF;
+	color: rgb(255, 255, 255);
 	font-weight: 500;
 	font-size: larger;
 
@@ -751,7 +751,7 @@ div.site-title {
 	div.site-title {
 		text-align: left;
 		max-width: 75rem;
-		margin: 8px auto 7px;
+		margin: 8px auto 4px;
 	}
 
 	div.site-title a {
@@ -793,7 +793,7 @@ div.site-title {
 		background-color: transparent;
 	}
 
-	#header-menu a {
+	#header-menu.menu.nav-menu a {
 		color: rgb(255, 255, 255);
 		transition: color 0.5s ease;
 	}
@@ -802,6 +802,19 @@ div.site-title {
 .site-header {
 	background-color: transparent;
 	transition: background-color 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+}
+
+.site-footer {
+	background-color: #FFFFFF;
+	color: #734F96;
+	margin-bottom: -24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.map-location {
+	text-align: center;
 }
 
 
@@ -838,7 +851,7 @@ div.site-title {
 
 .main-nav ul {
 	display: flex;
-	gap: 2rem;
+	gap: 3rem;
 	padding: 0;
 	margin: 0 1rem;
 	flex-direction: column;
@@ -855,19 +868,45 @@ div.site-title {
 .main-nav li {
 	list-style-type: none;
 	background-color: #FFFFFF;
-	width: 18rem;
+	width: 14rem;
+	height: 100%;
 	text-align: center;
+	padding-top: 2rem;
 	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
 }
 
-.main-nav li div {
-	background-color: #734F96;
-}
-
 .main-nav li a {
+	display: block;
+	background-color: #734F96;
+	margin-top: auto;
 	text-decoration: none;
 	color: #FFFFFF;
+	padding: 4px;
+	font-size: large;
 }
+
+li.main-team-nav {
+	padding-top: 5.8rem;
+}
+
+li.main-contact-nav {
+	padding-top: 6.95rem;
+}
+
+li.main-team-nav svg,
+li.main-contact-nav svg {
+	position: relative;
+}
+
+li.main-team-nav svg {
+	top: -26px;
+
+}
+
+li.main-contact-nav svg {
+	top: -40px;
+}
+
 
 /* Posts and pages
 --------------------------------------------- */
