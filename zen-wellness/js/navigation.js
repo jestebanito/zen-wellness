@@ -57,8 +57,9 @@
 
 	function handleScroll() {
 		const header = document.getElementById('masthead');
-		const headerMenu = document.querySelectorAll('#header-menu.menu.nav-menu li a');
+		const headerMenu = document.querySelectorAll('#header-menu a');
 		const svgElement = document.querySelectorAll('#zen-wellness-logo path');
+    	// const paths = svgElement.querySelectorAll('path');
 
 		if (window.scrollY > 100) {
 			header.classList.add('visible');

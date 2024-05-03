@@ -46,7 +46,17 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 		<nav id="site-navigation" class="main-navigation">
-			<button id="menu-btn" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><svg class="disable-click" role="img" aria-label="menu-open" xmlns="http://www.w3.org/2000/svg" width="46" height="29" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="5" d="M20.143 26H43M3 14.5h40M3 3h40"/></svg></button>
+
+			<a href="<?php echo esc_url(get_permalink(get_page_by_path('home'))); ?>" class="home-button">
+				<svg role="img" aria-label="Home Button" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+					<path fill="#fff" d="M17.922 1.6a3 3 0 0 0-3.841 0L1.08 12.43A3 3 0 0 0 0 14.736V29a3 3 0 0 0 3 3h4.665a3 3 0 0 0 3-3v-4.667a3 3 0 0 1 3-3h4.67a3 3 0 0 1 3 3V29a3 3 0 0 0 3 3H29a3 3 0 0 0 3-3V14.736a3 3 0 0 0-1.08-2.305L17.922 1.6Z"/>
+				</svg>
+			</a>
+
+			<button id="menu-btn" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<svg class="disable-click" role="img" aria-label="menu-open" xmlns="http://www.w3.org/2000/svg" width="46" height="29" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="5" d="M20.143 26H43M3 14.5h40M3 3h40"/>
+				</svg>
+			</button>
 			<?php
 
 			wp_nav_menu(
