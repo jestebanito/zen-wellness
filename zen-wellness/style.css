@@ -543,11 +543,12 @@ table {
 
 /* Links
 --------------------------------------------- */
-/* a {
-	color: #4169e1;
+a {
+	color: #FFFFFF;
+	text-decoration: none;
 }
 
-a:visited {
+/* a:visited {
 	color: #800080;
 } */
 
@@ -664,6 +665,7 @@ textarea {
 	background-color: #734F96;
 	position: fixed;
 	bottom: 0;
+	border-top: 4px solid #E6E6FA;
 }
 
 .main-navigation a {
@@ -687,6 +689,7 @@ textarea {
 
 ul#header-menu.menu.nav-menu {
 	background: #734F96;
+	border-top: 4px solid #E6E6FA;
 }
 
 .disable-click {
@@ -789,6 +792,7 @@ div.site-title {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
+		border-top: 0;
 	}
 
 	.main-navigation ul {
@@ -803,6 +807,7 @@ div.site-title {
 		position: absolute;
 		top: 24px;
 		background-color: transparent;
+		border-top: 0;
 	}
 
 	#header-menu.menu.nav-menu a {
@@ -817,12 +822,17 @@ div.site-title {
 }
 
 .site-footer {
-	background-color: #FFFFFF;
-	color: #734F96;
+	background-color: #734F96;
+	color: #FFFFFF;
 	margin-bottom: -24px;
+	padding-top: 1rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.footer-icon {
+	margin-bottom: 1rem;
 }
 
 .map-location {
