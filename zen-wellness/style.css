@@ -681,10 +681,10 @@ textarea {
 	margin: 0;
 	padding-left: 0;
 	position: absolute;
-	top: -117px;
+	top: -162px;
 	width: 100% !important;
 	text-align: center;
-	padding: 1rem;
+	padding: 0.5rem 0;
 }
 
 ul#header-menu.menu.nav-menu {
@@ -743,6 +743,10 @@ ul#header-menu.menu.nav-menu {
 	width: 5rem;
 }
 
+.main-navigation.toggled ul li {
+	padding: 3px 0;
+}
+
 .home-button {
 	display: flex;
 	justify-content: center;
@@ -757,6 +761,27 @@ ul#header-menu.menu.nav-menu {
 div.site-title {
 	text-align: center;
 	margin: 5px 0 4px;
+}
+
+.website-url {
+	text-decoration: underline;
+}
+
+.email svg {
+	position: relative;
+	top: 9px;
+	left: 4px;
+
+}
+
+.site-footer {
+	background-color: #52366D;
+	color: #FFFFFF;
+	margin-bottom: -24px;
+	padding: 2rem 0 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -787,7 +812,7 @@ div.site-title {
 
 	ul#header-menu.menu.nav-menu {
 		background: transparent;
-		max-width: 20rem;
+		max-width: 28rem;
 		justify-content: space-evenly;
 		position: absolute;
 		left: 50%;
@@ -799,6 +824,7 @@ div.site-title {
 		display: flex;
 		flex-direction: row;
 		top: 0;
+		padding: 1rem;
 	}
 
 	.main-navigation {
@@ -814,6 +840,28 @@ div.site-title {
 		color: rgb(255, 255, 255);
 		transition: color 0.5s ease;
 	}
+
+	.site-footer {
+		padding: 2rem 0 0;
+	}
+
+	#menu-item-50 {
+		position: relative;
+		top: -8px;
+	}
+}
+
+#menu-item-50 {
+	display: inline-block;
+	background-color: #734F96;
+	padding: 1px 8px 0;
+	border-radius: 3px;
+	border: 2px solid #E6E6FA;
+	margin-top: 6px;
+}
+
+#menu-item-50 a {
+	color: #FFFFFF !important;
 }
 
 .site-header {
@@ -821,15 +869,6 @@ div.site-title {
 	transition: background-color 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
 }
 
-.site-footer {
-	background-color: #734F96;
-	color: #FFFFFF;
-	margin-bottom: -24px;
-	padding-top: 1rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
 
 .footer-icon {
 	margin-bottom: 1rem;
@@ -1014,6 +1053,11 @@ li.main-contact-nav svg {
 }
 
 .wp-block-cover {
+	min-height: 380px;
+}
+
+/* 100vh affects only the Homepage Cover*/
+article#post-31 div.wp-block-cover {
 	min-height: 100vh;
 }
 
