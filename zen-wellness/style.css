@@ -493,10 +493,10 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-ul,
+/* ul,
 ol {
 	margin: 0 0 1.5em 3em;
-}
+} */
 
 ul {
 	list-style: disc;
@@ -681,7 +681,7 @@ textarea {
 	margin: 0;
 	padding-left: 0;
 	position: absolute;
-	top: -162px;
+	top: -163px;
 	width: 100% !important;
 	text-align: center;
 	padding: 0.5rem 0;
@@ -785,7 +785,6 @@ div.site-title {
 }
 
 @media screen and (min-width: 37.5em) {
-
 	div.site-title {
 		text-align: left;
 		max-width: 75rem;
@@ -851,13 +850,40 @@ div.site-title {
 	}
 }
 
+@media screen and (min-width: 38em) {
+	.rmt-info {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem 4rem;
+		max-width: 54rem;
+		margin: 0 auto;
+	}
+}
+
+.rmt-container {
+	background-color: #FFFFFF;
+	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+	margin: 4rem 0;
+}
+
+.rmt-info-book-btn {
+	display: inline-block;
+	background-color: #734F96;
+	padding: 5px 10px;
+	position: relative;
+	left: 50%;
+	border-radius: 4px;
+	transform: translateX(-50%);
+	font-size: large;
+}
+
 #menu-item-50 {
 	display: inline-block;
 	background-color: #734F96;
 	padding: 1px 8px 0;
-	border-radius: 3px;
+	border-radius: 4px;
 	border: 2px solid #E6E6FA;
-	margin-top: 6px;
+	margin-top: 7px;
 }
 
 #menu-item-50 a {
@@ -1053,7 +1079,16 @@ li.main-contact-nav svg {
 }
 
 .wp-block-cover {
-	min-height: 380px;
+	min-height: 400px;
+}
+
+p.has-text-align-center.has-large-font-size,
+p.has-text-align-center {
+	text-shadow: 3px 4px 6px rgba(0, 0, 0, .3);
+}
+
+p.has-text-align-center {
+	font-size: larger;
 }
 
 /* 100vh affects only the Homepage Cover*/

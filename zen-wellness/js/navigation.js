@@ -61,7 +61,7 @@
 		const svgElement = document.querySelectorAll('#zen-wellness-logo path');
     	// const paths = svgElement.querySelectorAll('path');
 
-		if (window.scrollY > 100) {
+		if (window.scrollY > 50) {
 			header.classList.add('visible');
 			header.style.backgroundColor = 'rgb(255, 255, 255)';
 			header.style.boxShadow = '0 6px 6px rgba(0,0,0,0.25)';
