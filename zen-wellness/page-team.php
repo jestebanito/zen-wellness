@@ -30,7 +30,32 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+        <?php
+			$args = array(
+				'post_type'      => 'zen-wellness-team',
+				'posts_per_page' => -1,
+			);
 
+			$query = new WP_Query($args);
+
+			if ($query->have_posts()) :
+		?>
+        <section class="zen-wellness-teampage">
+            <?php
+                while ($query->have_posts()) :
+                    $query->the_post();
+                    if (function_exists('get_field')) :
+            ?>
+            <article class="team-page">
+                <?php the_post_thumbnail('medium'); ?> 
+            </article>
+            <?php
+					endif;
+				endwhile;
+				wp_reset_postdata();
+			endif 
+			?>
+        </section>
 	</main><!-- #main -->
 
 <?php
