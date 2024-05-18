@@ -852,6 +852,23 @@ div.site-title {
 }
 
 @media screen and (min-width: 46em) {
+
+	.team-info {
+		display: grid;
+		padding: 1rem !important;
+		grid-template-columns: 281px 1fr;
+		max-width: 50rem !important;
+		gap: 0 2rem;
+	}
+
+	.team-info h2 {
+		margin: 0
+	}
+
+	.team-info > div:nth-child(2) {
+		grid-row: span 2;
+	}
+
 	.rmt-info {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -876,6 +893,47 @@ div.site-title {
 		margin-top: 0 !important;
 	}
 }
+
+.team-container {
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.team-info {
+	padding: 0 1rem 1rem;
+	max-width: 28rem;
+	margin: 0 auto;
+}
+
+.team-container img {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.rates-container,
+.hours-container {
+	background-color: #FFFFFF;
+	color: #734F96;
+	width: 16rem;
+	height: 100%;
+	text-align: center;
+	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+	padding: 1px 0;
+	margin: 3rem auto;
+}
+
+.rates-container ul,
+.hours-container ul {
+	padding-left: 0;
+}
+
+.rates-container li,
+.hours-container li {
+	list-style-type: none;
+}
+
 
 .rmt-container {
 	background-color: #FFFFFF;
@@ -902,6 +960,18 @@ div.site-title {
 	transform: translateX(-50%);
 	font-size: large;
 	margin-top: 2rem;
+}
+
+.rmt-team-book-btn {
+	display: inline-block;
+	background-color: #734F96;
+	padding: 5px 10px;
+	position: relative;
+	left: 50%;
+	border-radius: 4px;
+	transform: translateX(-50%);
+	font-size: large;
+	margin-top: 0.5rem;
 }
 
 #menu-item-50 {

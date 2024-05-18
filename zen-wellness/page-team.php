@@ -46,21 +46,27 @@ get_header();
 				if (function_exists('get_field')) :
 		?>
             <section class="team-container">
-                <?php the_post_thumbnail('custom-size'); ?> 
-
-				<?php if (get_field('team_title')) :?>
-				<h3>
-					<?php echo get_field('team_title'); ?>
-				</h3>
-				<?php endif; ?>
-
-				<?php if (get_field('team_description')) :?>
-				<p>
-					<?php echo get_field('team_description'); ?>
-				</p>
-				<?php endif; ?>
-				<a class="rmt-info-book-btn" href="<?php echo esc_url(get_permalink(get_page_by_path('book'))); ?>">Book a session</a>
-            </section>
+				<div class="team-info">
+					<div>
+						<?php the_post_thumbnail('custom-size'); ?> 
+					</div>
+					<div>
+						<?php if (get_field('team_title')) :?>
+						<h2>
+							<?php echo get_field('team_title'); ?>
+						</h2>
+						<?php endif; ?>
+						<?php if (get_field('team_description')) :?>
+						<p>
+							<?php echo wp_kses_post(get_field('team_description')); ?>
+						</p>
+						<?php endif; ?>
+					</div>
+					<div class="button-grid">
+						<a class="rmt-team-book-btn" href="<?php echo esc_url(get_permalink(get_page_by_path('book'))); ?>">Book a session</a>
+					</div>
+				</div>
+			</section>
 			<section class="rates-container">
 				<h3>Rates</h3>
 				<?php

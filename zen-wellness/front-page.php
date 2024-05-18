@@ -56,38 +56,42 @@ get_header();
 
 		<section class="rmt-container">
 			<div class="rmt-info">
-			<div>
-			<?php
-				$rmt_image = get_field('rmt_image');
-				if ($rmt_image) : ?>
-					<?php echo '<img src="' . esc_url($rmt_image) . '"alt = "Massage therapist working">'; ?>
-				<?php
-				endif;
-				?></div>
-			<div><?php
-				$rmt_definition = get_field('rmt_definition');
-				if ($rmt_definition) : ?>
-					<h3><?php echo esc_html($rmt_definition); ?></h3>
+				<div>
+					<?php
+						$rmt_image = get_field('rmt_image');
+						if ($rmt_image) : ?>
+							<?php echo '<img src="' . esc_url($rmt_image) . '"alt = "Massage therapist working">'; ?>
+						<?php
+						endif;
+					?>
+				</div>
+				<div>
+					<?php
+					$rmt_definition = get_field('rmt_definition');
+					if ($rmt_definition) : ?>
+						<h3><?php echo esc_html($rmt_definition); ?></h3>
+					<?php
+					endif;
+					?>
+				</div>
+				<div>
+					<?php
+						$condition_title = get_field('condition_title');
+						if ($condition_title) : ?>
+							<h3><?php echo esc_html($condition_title); ?></h3>
+					<?php
+					endif;
 					
-				<?php
-				endif;
-			?></div>
-			<div><?php
-				$condition_title = get_field('condition_title');
-				if ($condition_title) : ?>
-					<h3><?php echo esc_html($condition_title); ?></h3>
-				<?php
-				endif;
-				
-				$rmt_conditions = get_field('rmt_conditions');
-				if ($rmt_conditions && is_array($rmt_conditions)) : 
-					echo '<ul class="rmt-conditions">';
-					foreach ($rmt_conditions as $item) {
-						echo '<li>' . $item['condition_types'] . '</li>';
-					}
-					echo '</ul>';
-				endif;
-			?></div>
+					$rmt_conditions = get_field('rmt_conditions');
+					if ($rmt_conditions && is_array($rmt_conditions)) : 
+						echo '<ul class="rmt-conditions">';
+						foreach ($rmt_conditions as $item) {
+							echo '<li>' . $item['condition_types'] . '</li>';
+						}
+						echo '</ul>';
+					endif;
+					?>
+				</div>
 			<div><?php
 				$advantage_title = get_field('advantage_title');
 				if ($advantage_title) : ?>
