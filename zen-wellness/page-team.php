@@ -40,22 +40,59 @@ get_header();
 
 			if ($query->have_posts()) :
 		?>
-        <section class="zen-wellness-teampage">
-            <?php
-                while ($query->have_posts()) :
-                    $query->the_post();
-                    if (function_exists('get_field')) :
-            ?>
-            <article class="team-page">
-                <?php the_post_thumbnail('medium'); ?> 
-            </article>
-            <?php
+		<?php
+			while ($query->have_posts()) :
+				$query->the_post();
+				if (function_exists('get_field')) :
+		?>
+            <section class="team-container">
+                <?php the_post_thumbnail('custom-size'); ?> 
+
+				<?php if (get_field('team_title')) :?>
+				<h3>
+					<?php echo get_field('team_title'); ?>
+				</h3>
+				<?php endif; ?>
+
+				<?php if (get_field('team_description')) :?>
+				<p>
+					<?php echo get_field('team_description'); ?>
+				</p>
+				<?php endif; ?>
+				<a class="rmt-info-book-btn" href="<?php echo esc_url(get_permalink(get_page_by_path('book'))); ?>">Book a session</a>
+            </section>
+			<section class="rates-container">
+				<h3>Rates</h3>
+				<?php
+					$rates_bullets = get_field('rates_bullets');
+					if ($rates_bullets && is_array($rates_bullets)) : 
+						echo '<ul class="rates-bullets">';
+						foreach ($rates_bullets as $item) {
+							echo '<li>' . $item['bullet_points'] . '</li>';
+						}
+						echo '</ul>';
 					endif;
-				endwhile;
-				wp_reset_postdata();
+				?>
+			</section>
+			<section class="hours-container">
+				<h3>Hours</h3>
+				<?php
+					$hours_bullets = get_field('hours_bullets');
+					if ($hours_bullets && is_array($hours_bullets)) : 
+						echo '<ul class="rates-bullets">';
+						foreach ($hours_bullets as $item) {
+							echo '<li>' . $item['bullet_points'] . '</li>';
+						}
+						echo '</ul>';
+					endif;
+				?>
+			</section>
+		<?php
+			endif;
+			endwhile;
+			wp_reset_postdata();
 			endif 
-			?>
-        </section>
+		?>
 	</main><!-- #main -->
 
 <?php

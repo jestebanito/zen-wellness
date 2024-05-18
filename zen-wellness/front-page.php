@@ -43,7 +43,7 @@ get_header();
 			<li class="main-book-nav">
 				<?php echo file_get_contents(get_template_directory_uri() . '/icons/book-icon.svg'); ?>
 				<h2>Find your Zen</h2>
-					<a href="">Book a session</a>
+					<a href="<?php echo esc_url(get_permalink(get_page_by_path('book'))); ?>">Book a session</a>
 			</li>
 
 			<li class="main-contact-nav">
