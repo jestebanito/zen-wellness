@@ -852,17 +852,16 @@ div.site-title {
 }
 
 @media screen and (min-width: 46em) {
-
 	.team-info {
 		display: grid;
-		padding: 1rem !important;
+		padding: 1.5rem !important;
 		grid-template-columns: 281px 1fr;
 		max-width: 50rem !important;
 		gap: 0 2rem;
 	}
 
 	.team-info h2 {
-		margin: 0
+		margin: 0;
 	}
 
 	.team-info > div:nth-child(2) {
@@ -910,6 +909,45 @@ div.site-title {
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+@media screen and (min-width: 38.5em) {
+	.insurance-container {
+		flex-direction: column;
+		max-width: 37rem;
+	}
+
+	.insurance-container ul {
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		left: 30px;
+		padding: 0 !important;
+	}
+
+	.insurance-container li {
+			flex: 0 0 50%; /* Two columns, each item takes up 50% of the width */
+			box-sizing: border-box;
+			font-size: large;
+	}
+}
+
+.insurance-container {
+	padding: 0 1rem;
+	margin: 4rem auto;
+}
+
+.insurance-container ul {
+	padding: 0 3rem;
+}
+
+.insurance-container h2 {
+	color: #734F96;
+	text-align: center;
+}
+
+.insurance-container li:last-child {
+	font-weight: bold;
 }
 
 .rates-container,
@@ -999,6 +1037,10 @@ div.site-title {
 
 .map-location {
 	text-align: center;
+}
+
+.map-location h2 {
+	color: #734F96;
 }
 
 

@@ -46,6 +46,7 @@ get_header();
 				if (function_exists('get_field')) :
 		?>
 			<section class="rates-container">
+                <h3>Rates</h3>
 				<?php
 					$rates_bullets = get_field('rates_bullets');
 					if ($rates_bullets && is_array($rates_bullets)) : 
@@ -77,7 +78,7 @@ get_header();
 			endif 
 		?>
             <section class="insurance-container">
-                <h3>We provide direct billing to your insurance company!</h3>
+                <h2>We provide direct billing to your insurance company!</h2>
                 <?php
                     $insurance_list = get_field('insurance_list');
                     if ($insurance_list && is_array($insurance_list)) : 
