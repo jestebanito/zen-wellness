@@ -639,15 +639,42 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #111;
+	color: rgba(0, 0, 0, 0.8);
+	border: 1px solid #734F96;
+	outline: 2px solid #734F96;
 }
 
 select {
 	border: 1px solid #ccc;
 }
 
-textarea {
+textarea, 
+input {
 	width: 100%;
+	background-color: #E6E6FA;
+}
+
+.form-container {
+	max-width: 30rem;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.name-fields {
+    display: flex;
+    gap: 0 1rem;
+}
+
+.submit-button input {
+	background-color: #734F96;
+	color: #FFFFFF;
+	padding: 6px 10px 4px;
+	border-radius: 4px;
+	font-size: large;
+	width: 6rem;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 /*--------------------------------------------------------------
@@ -1233,6 +1260,13 @@ p.has-text-align-center {
 /* 100vh affects only the Homepage Cover*/
 article#post-31 div.wp-block-cover {
 	min-height: 100vh;
+}
+
+div.wp-block-group__inner-container.is-layout-constrained.wp-block-group-is-layout-constrained {
+	margin: 0 auto;
+	max-width: 30rem;
+	padding: 0 1rem;
+	margin-top: 4rem;
 }
 
 /* Galleries
