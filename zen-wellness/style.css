@@ -660,6 +660,10 @@ input {
 	padding: 0 1rem;
 }
 
+.form-container p {
+	font-weight: bold;
+}
+
 .name-fields {
     display: flex;
     gap: 0 1rem;
@@ -795,12 +799,30 @@ div.site-title {
 	text-decoration: underline;
 }
 
-.email svg {
-	position: relative;
-	top: 9px;
-	left: 4px;
-
+.email {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
+.email p {
+	margin: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.email img {
+	width: 3rem;
+	padding: 0.7rem;
+	border-radius: 30%;
+}
+
+.email img:hover {
+	background-color: #68448d;
+}
+
+.email img:active {
+	background-color: #604080;
+}
+
 
 .site-footer {
 	background-color: #52366D;

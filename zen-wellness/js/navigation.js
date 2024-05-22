@@ -151,3 +151,17 @@
 		}
 	}
 }() );
+
+	const copyButton = document.getElementById('copy-button');
+	const emailTextElement = document.getElementById('email-text');
+
+	copyButton.addEventListener('click', () => {
+		const emailText = emailTextElement.textContent;
+		navigator.clipboard.writeText(emailText)
+			.then(() => {
+				console.log('Text copied to clipboard');
+			})
+			.catch((error) => {
+				console.error('Failed to copy text: ', error);
+			});
+	});

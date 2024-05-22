@@ -21,12 +21,14 @@
 	</div>
 	<footer id="colophon" class="site-footer">
 		<?php echo file_get_contents(get_template_directory_uri() . '/icons/zen-wellness-icon-lrg.svg'); ?>
-		<span class="email">
-			<a href="mailto:zenwellnessbc@gmail.com">
-				zenwellnessbc@gmail.com
-			</a>
-			<?php echo file_get_contents(get_template_directory_uri() . '/icons/copy-icon.svg'); ?>
-		</span>	
+		<div class="email">
+			<p id="email-text">
+				<a href="mailto:zenwellnessbc@gmail.com">
+					zenwellnessbc@gmail.com
+				</a>
+			</p>
+			<img src="<?php echo get_template_directory_uri() . '/icons/copy-icon.svg'; ?>" alt="Copy Icon" id="copy-button"/>
+		</div>	
 		
 		<p>&copy; 2024 Zen Wellness, All rights reserved.</p>
 
