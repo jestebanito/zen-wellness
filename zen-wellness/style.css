@@ -977,7 +977,6 @@ div.site-title {
 	.insurance-container li {
 			flex: 0 0 50%; /* Two columns, each item takes up 50% of the width */
 			box-sizing: border-box;
-			font-size: large;
 	}
 }
 
@@ -987,7 +986,11 @@ div.site-title {
 }
 
 .insurance-container ul {
-	padding: 0 3rem;
+	padding: 0 2.5rem;
+}
+
+.insurance-container li {
+	font-size: large;
 }
 
 .insurance-container h2 {
