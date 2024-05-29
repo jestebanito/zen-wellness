@@ -697,7 +697,7 @@ input {
 	background-color: #734F96;
 	position: fixed;
 	bottom: 0;
-	border-top: 4px solid #E6E6FA;
+	border-top: 3px solid #E6E6FA;
 }
 
 .main-navigation a {
@@ -713,7 +713,7 @@ input {
 	margin: 0;
 	padding-left: 0;
 	position: absolute;
-	top: -163px;
+	top: -160px;
 	width: 100% !important;
 	text-align: center;
 	padding: 0.5rem 0;
@@ -721,7 +721,7 @@ input {
 
 ul#header-menu.menu.nav-menu {
 	background: #734F96;
-	border-top: 4px solid #E6E6FA;
+	border-top: 3px solid #E6E6FA;
 }
 
 .disable-click {
@@ -1061,12 +1061,16 @@ div.site-title {
 	margin-top: 0.5rem;
 }
 
+.rmt-conditions li {
+	font-size: large;
+}
+
 #menu-item-50 {
 	display: inline-block;
 	background-color: #734F96;
 	padding: 1px 8px 0;
 	border-radius: 4px;
-	border: 2px solid #E6E6FA;
+	border: 1.5px solid #E6E6FA;
 	margin-top: 7px;
 }
 
@@ -1282,6 +1286,16 @@ p.has-text-align-center {
 /* 100vh affects only the Homepage Cover*/
 article#post-31 div.wp-block-cover {
 	min-height: 100vh;
+}
+
+article#post-31 div.wp-block-cover__inner-container.is-layout-constrained.wp-block-cover-is-layout-constrained {
+	margin-bottom: 8rem;
+	max-width: 38rem;
+}
+
+div.wp-block-cover__inner-container.is-layout-constrained.wp-block-cover-is-layout-constrained p {
+	padding: 0;
+	margin: 1rem auto;
 }
 
 div.wp-block-group__inner-container.is-layout-constrained.wp-block-group-is-layout-constrained {
