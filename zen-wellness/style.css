@@ -486,6 +486,20 @@ header#masthead.site-header {
 	z-index: 1000;
 }
 
+#site-navigation {
+	transition: bottom 0.3s ease;
+}
+
+#site-navigation.hide {
+	bottom: -50px;
+}
+
+#site-navigation.show {
+	bottom: 0;
+}
+
+
+
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -1086,6 +1100,9 @@ div.site-title {
 	transition: background-color 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
 }
 
+.show {
+	display: block;
+}
 
 .footer-icon {
 	margin-bottom: 1rem;

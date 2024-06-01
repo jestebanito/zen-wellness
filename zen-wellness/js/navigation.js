@@ -54,12 +54,15 @@
 		
 		isMenuOpen = !isMenuOpen;
 	};
+	
+	let prevScrollPos = window.scrollY;
 
 	function handleScroll() {
 		const header = document.getElementById('masthead');
 		const headerMenu = document.querySelectorAll('#header-menu a');
 		const svgElement = document.querySelectorAll('#zen-wellness-logo path');
-    	// const paths = svgElement.querySelectorAll('path');
+		const footerNav = document.getElementById('site-navigation');
+		const currentScrollPos = window.scrollY;
 
 		if (window.scrollY > 50) {
 			header.classList.add('visible');
@@ -91,8 +94,18 @@
 				});
 			}
 		}
-	};
 
+		if (prevScrollPos > currentScrollPos && window.matchMedia('(max-width: 37.5em)').matches) {
+			footerNav.classList.add('show');
+			footerNav.classList.remove('hide');
+		} else {
+			footerNav.classList.add('hide');
+			footerNav.classList.remove('show');
+		}
+
+		prevScrollPos = currentScrollPos;
+	};
+	
 	window.addEventListener('scroll', handleScroll);
 	window.addEventListener('resize', handleScroll);
 
@@ -151,6 +164,8 @@
 		}
 	}
 }() );
+
+// Function for handling the copy to clipboard for email address copy svg in Footer 
 
 	const copyButton = document.getElementById('copy-button');
 	const emailTextElement = document.getElementById('email-text');
