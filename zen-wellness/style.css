@@ -486,20 +486,6 @@ header#masthead.site-header {
 	z-index: 1000;
 }
 
-#site-navigation {
-	transition: bottom 0.3s ease;
-}
-
-#site-navigation.hide {
-	bottom: -50px;
-}
-
-#site-navigation.show {
-	bottom: 0;
-}
-
-
-
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -731,6 +717,18 @@ input {
 	width: 100% !important;
 	text-align: center;
 	padding: 0.5rem 0;
+}
+
+#site-navigation {
+	transition: bottom 0.3s ease;
+}
+
+#site-navigation.hide {
+	bottom: -52px;
+}
+
+#site-navigation.show {
+	bottom: 0;
 }
 
 ul#header-menu.menu.nav-menu {
