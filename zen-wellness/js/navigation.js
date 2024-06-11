@@ -37,8 +37,10 @@
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
+			document.body.classList.remove('no-scroll');
 		} else {
 			button.setAttribute( 'aria-expanded', 'true' );
+			document.body.classList.add('no-scroll');
 		}
 	});
 
@@ -47,9 +49,9 @@
 	menuButton.onclick = function() {
 
 		if (isMenuOpen) {
-			menuButton.innerHTML = '<svg class="disable-click" role="img" aria-label="menu-closed" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="5" d="M3 25.765 25.864 3m-22.761.202L26 26"/></svg>';
+			menuButton.innerHTML = '<svg class="disable-click" role="img" aria-label="menu-closed" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="5" d="M3 22.795 22.881 3M3.09 3.176 23 23"/></svg>';
 		} else {
-			menuButton.innerHTML = '<svg class="disable-click" role="img" aria-label="menu-open" xmlns="http://www.w3.org/2000/svg" width="46" height="29" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="5" d="M20.143 26H43M3 14.5h40M3 3h40"/></svg>';
+			menuButton.innerHTML = '<svg class="disable-click" role="img" aria-label="menu-open" xmlns="http://www.w3.org/2000/svg" width="34" height="26" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="5" d="M15 23h16M3 13h28M3 3h28"/></svg>';
 		}
 		
 		isMenuOpen = !isMenuOpen;
@@ -112,10 +114,17 @@
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
 	document.addEventListener( 'click', function( event ) {
 		const isClickInside = siteNavigation.contains( event.target );
+		const isButtonClick = menuButton.contains(event.target);
 
-		if ( ! isClickInside ) {
+		if ( ! isClickInside && !isButtonClick ) {
 			siteNavigation.classList.remove( 'toggled' );
+			
 			button.setAttribute( 'aria-expanded', 'false' );
+
+			menuButton.innerHTML = '<svg class="disable-click" role="img" aria-label="menu-open" xmlns="http://www.w3.org/2000/svg" width="34" height="26" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-width="5" d="M15 23h16M3 13h28M3 3h28"/></svg>';
+			isMenuOpen = true;
+
+			document.body.classList.remove('no-scroll');
 		}
 	});
 

@@ -804,7 +804,7 @@ ul#header-menu.menu.nav-menu {
 
 div.site-title {
 	text-align: center;
-	margin: 5px 0 4px;
+	margin: 6px 0 0;
 }
 
 .website-url {
@@ -840,10 +840,26 @@ div.site-title {
 	background-color: #52366D;
 	color: #FFFFFF;
 	margin-bottom: -24px;
-	padding: 2rem 0 3rem;
+	padding: 2rem 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	line-height: initial;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.no-scroll::after {
+	content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% transparent white */
+    pointer-events: none; /* Allows clicks to pass through the overlay */
 }
 
 @media screen and (min-width: 37.5em) {
@@ -858,7 +874,7 @@ div.site-title {
 		z-index: 2000;
 		display: block;
 		width: 4.5rem;
-		margin-left: 1rem;
+		margin-left: 1.5rem;
 	}
 
 
@@ -884,7 +900,7 @@ div.site-title {
 	.main-navigation ul {
 		display: flex;
 		flex-direction: row;
-		top: 0;
+		top: -5px;
 		padding: 1rem;
 	}
 
