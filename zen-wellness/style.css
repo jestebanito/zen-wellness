@@ -697,7 +697,7 @@ input {
 	background-color: #734F96;
 	position: fixed;
 	bottom: 0;
-	border-top: 3px solid #E6E6FA;
+	/* border-top: 3px solid #E6E6FA; */
 }
 
 .main-navigation a {
@@ -713,7 +713,7 @@ input {
 	margin: 0;
 	padding-left: 0;
 	position: absolute;
-	top: -160px;
+	top: -159px;
 	width: 100% !important;
 	text-align: center;
 	padding: 0.5rem 0;
@@ -728,12 +728,12 @@ input {
 }
 
 #site-navigation.show {
-	bottom: 0;
+	bottom: -1px;
 }
 
 ul#header-menu.menu.nav-menu {
 	background: #734F96;
-	border-top: 3px solid #E6E6FA;
+	/* border-top: 3px solid #E6E6FA; */
 }
 
 .disable-click {
@@ -847,6 +847,8 @@ div.site-title {
 	line-height: initial;
 }
 
+/* FOR BETTER UX. USER CANNOT SCROLL WHILE NAVIGATION BAR IS SHOWING IN MOBILE.
+THE .no-scroll CLASS IS PULLED INTO navigation.js, lines 40, 43, and 127*/
 .no-scroll {
 	overflow: hidden;
 }
@@ -1166,7 +1168,7 @@ div.site-title {
 	display: flex;
 	gap: 3rem;
 	padding: 0;
-	margin: 0 1rem;
+	margin: 3rem 1rem 0;
 	flex-direction: column;
 	align-items: center;
 }
@@ -1199,11 +1201,11 @@ div.site-title {
 }
 
 li.main-team-nav {
-	padding-top: 5.8rem;
+	padding-top: 4.3rem;
 }
 
 li.main-contact-nav {
-	padding-top: 7.3rem;
+	padding-top: 5.8rem;
 }
 
 li.main-team-nav svg,
