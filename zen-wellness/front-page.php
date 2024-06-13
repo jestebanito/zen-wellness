@@ -114,6 +114,14 @@ get_header();
 				</a>
 		</section>
 
+		<section>
+			<div class="instagram">
+				<?php
+					echo do_shortcode( '[instagram-feed feed=1]');
+				?>
+			</div>
+		</section>
+
 	</main><!-- #main -->
 
 <?php

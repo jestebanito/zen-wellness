@@ -928,6 +928,12 @@ THE .no-scroll CLASS IS PULLED INTO navigation.js, lines 40, 43, and 127*/
 		position: relative;
 		top: -9px;
 	}
+
+	.instagram {
+		max-width: 60rem;
+		margin: 0 auto 4rem;
+		padding: 0 1rem;
+	}
 }
 
 @media screen and (min-width: 46em) {

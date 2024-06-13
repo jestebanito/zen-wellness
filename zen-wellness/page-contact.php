@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying the Contact page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -19,11 +19,6 @@ get_header();
 
 		<?php
 		while ( have_posts() ) :
-		?>
-		<p>
-		Our team is committed to providing you with the best care!
-		</p>
-		<?php
 			the_post();
 
 			get_template_part( 'template-parts/content', 'page' );
@@ -35,6 +30,12 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+
+		<div class="instagram">
+			<?php
+				echo do_shortcode( '[instagram-feed feed=1]');
+			?>
+		</div>
 
 	</main><!-- #main -->
 
