@@ -696,7 +696,7 @@ input {
 	width: 100%;
 	background-color: #734F96;
 	position: fixed;
-	bottom: 0;
+	bottom: -1px;
 	/* border-top: 3px solid #E6E6FA; */
 }
 
@@ -713,13 +713,14 @@ input {
 	margin: 0;
 	padding-left: 0;
 	position: absolute;
-	top: -159px;
+	top: -157px;
 	width: 100% !important;
 	text-align: center;
 	padding: 0.5rem 0;
 }
 
-#site-navigation {
+/* USED TO HIDE NAV BAR WHEN SCROLLING UP AND SHOW NAV BAR WHEN SCROLLING DOWN */
+/* #site-navigation {
 	transition: bottom 0.3s ease;
 }
 
@@ -729,7 +730,7 @@ input {
 
 #site-navigation.show {
 	bottom: -1px;
-}
+} */
 
 ul#header-menu.menu.nav-menu {
 	background: #734F96;
@@ -849,20 +850,22 @@ div.site-title {
 
 /* FOR BETTER UX. USER CANNOT SCROLL WHILE NAVIGATION BAR IS SHOWING IN MOBILE.
 THE .no-scroll CLASS IS PULLED INTO navigation.js, lines 40, 43, and 127*/
+.no-scroll::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* 50% transparent white */
+	pointer-events: none; /* Allows clicks to pass through the overlay */
+	z-index: 999;
+}
+
 .no-scroll {
 	overflow: hidden;
 }
 
-.no-scroll::after {
-	content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 50% transparent white */
-    pointer-events: none; /* Allows clicks to pass through the overlay */
-}
 
 @media screen and (min-width: 37.5em) {
 	div.site-title {

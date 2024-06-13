@@ -57,14 +57,14 @@
 		isMenuOpen = !isMenuOpen;
 	};
 	
-	let prevScrollPos = window.scrollY;
+	// let prevScrollPos = window.scrollY;
 
 	function handleScroll() {
 		const header = document.getElementById('masthead');
 		const headerMenu = document.querySelectorAll('#header-menu a');
 		const svgElement = document.querySelectorAll('#zen-wellness-logo path');
 		const footerNav = document.getElementById('site-navigation');
-		const currentScrollPos = window.scrollY;
+		// const currentScrollPos = window.scrollY;
 
 		if (window.scrollY > 50) {
 			header.classList.add('visible');
@@ -97,15 +97,15 @@
 			}
 		}
 
-		if (prevScrollPos > currentScrollPos && window.matchMedia('(max-width: 37.5em)').matches) {
-			footerNav.classList.add('show');
-			footerNav.classList.remove('hide');
-		} else {
-			footerNav.classList.add('hide');
-			footerNav.classList.remove('show');
-		}
+		// if (prevScrollPos > currentScrollPos && window.matchMedia('(max-width: 37.5em)').matches) {
+		// 	footerNav.classList.add('show');
+		// 	footerNav.classList.remove('hide');
+		// } else {
+		// 	footerNav.classList.add('hide');
+		// 	footerNav.classList.remove('show');
+		// }
 
-		prevScrollPos = currentScrollPos;
+		// prevScrollPos = currentScrollPos;
 	};
 	
 	window.addEventListener('scroll', handleScroll);
