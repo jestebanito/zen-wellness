@@ -75,26 +75,28 @@
 				headerMenu.forEach(function(anchor) {
 					anchor.style.color = 'rgb(115, 79, 150)';
 				});
-			};
-
+			} else if (!window.matchMedia('(min-width: 37.5em)').matches) {
+				headerMenu.forEach(function(anchor) {
+					anchor.style.color = 'rgb(255, 255, 255)';
+				});
+			} 
+			
 			svgElement.forEach(function(path) {
 				path.style.fill = 'rgb(115, 79, 150)';
 			});
-
+				
 		} else {
 			header.style.backgroundColor = 'transparent';
 			header.style.boxShadow = 'none';
 			header.classList.remove('visible');
-
+			
 			svgElement.forEach(function(path) {
-            	path.style.fill = 'rgb(255, 255, 255)'; 
-        	});
-
-			if (window.matchMedia('(min-width: 37.5em)').matches) {
-				headerMenu.forEach(function(anchor) {
-					anchor.style.color = 'rgb(255, 255, 255)';
-				});
-			}
+				path.style.fill = 'rgb(255, 255, 255)'; 
+			});
+				
+			headerMenu.forEach(function(anchor) {
+				anchor.style.color = 'rgb(255, 255, 255)';
+			});
 		}
 
 		// if (prevScrollPos > currentScrollPos && window.matchMedia('(max-width: 37.5em)').matches) {
