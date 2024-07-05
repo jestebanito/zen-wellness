@@ -772,6 +772,36 @@ input {
 			padding: 2rem 0 0;
 		}
 	}
+
+	.error-404-not-found {
+		text-align: center;
+		padding: 0 1rem 3rem;
+		background-color: #52366D;
+		color: #F9FAFB;
+	}
+
+	.error-404-not-found h1 {
+		padding-top: 8rem;
+	}
+
+	.error-404-not-found .mobile-message {
+		display: block;
+	}
+	
+	.error-404-not-found .desktop-message {
+		display: none;
+	}
+	
+	/* Styles for mobile devices */
+	@media (min-width: 37.5em) {
+		.error-404-not-found .mobile-message {
+			display: none;
+		}
+	
+		.error-404-not-found .desktop-message {
+			display: block;
+		}
+	}
 	
 	/*--------------------------------------------------------------
 	# Components
@@ -811,7 +841,6 @@ bottom: -1px;
 	color: rgb(255, 255, 255);
 	font-weight: 500;
 	font-size: larger;
-
 }
 
 .main-navigation ul {
