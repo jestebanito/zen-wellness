@@ -34,23 +34,29 @@ get_header();
 		<!-- Main Navigation -->
 		<section class="main-nav">
 			<ul>
-			<li class="main-team-nav">
-			<?php echo file_get_contents(get_template_directory_uri() . '/icons/team-icon.svg'); ?>
-				<h2>Meet your RMT</h2>
-					<a href="<?php echo esc_url(get_permalink(get_page_by_path('team'))); ?>">Our Team</a>
-			</li>
+				<li class="main-team-nav">
+					<a href="<?php echo esc_url(get_permalink(get_page_by_path('team'))); ?>">
+						<?php echo file_get_contents(get_template_directory_uri() . '/icons/team-icon.svg'); ?>
+						<h2>Meet your RMT</h2>
+						<p class="main-nav-buttons">Our Team</p>
+					</a>
+				</li>
 
-			<li class="main-book-nav">
-				<?php echo file_get_contents(get_template_directory_uri() . '/icons/book-icon.svg'); ?>
-				<h2>Find your Zen</h2>
-					<a href="<?php echo esc_url(get_permalink(get_page_by_path('book'))); ?>">Book a session</a>
-			</li>
+				<li class="main-book-nav">
+					<a href="<?php echo esc_url(get_permalink(get_page_by_path('book'))); ?>">
+						<?php echo file_get_contents(get_template_directory_uri() . '/icons/book-icon.svg'); ?>
+						<h2>Find your Zen</h2>
+						<p class="main-nav-buttons">Book a session</p>
+					</a>
+				</li>
 
-			<li class="main-contact-nav">
-				<?php echo file_get_contents(get_template_directory_uri() . '/icons/contact-icon.svg'); ?>
-				<h2>Contact us</h2>
-					<a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">Contact us</a>
-			</li>
+				<li class="main-contact-nav">
+					<a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>">
+						<?php echo file_get_contents(get_template_directory_uri() . '/icons/contact-icon.svg'); ?>
+						<h2>Contact us</h2>
+						<p class="main-nav-buttons">Contact us</p>
+					</a>
+				</li>
 			</ul>
 		</section>
 

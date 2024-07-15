@@ -1234,21 +1234,39 @@ div.site-title {
 	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
 }
 
-.main-nav li a {
+.main-nav a {
+	display: block;
+}
+
+
+.main-nav li .main-nav-buttons {
 	display: block;
 	background-color: #734F96;
 	margin-top: auto;
+	margin-bottom: 0;
 	text-decoration: none;
 	color: #FFFFFF;
 	padding: 4px;
 	font-size: large;
 }
 
-li.main-team-nav {
+.main-nav li h2{
+	color: #000;
+}
+
+li.main-team-nav a {
+	margin-top: -2rem;
 	padding-top: 4.3rem;
 }
 
-li.main-contact-nav {
+li.main-book-nav a {
+	margin-top: -2rem;
+	padding-top: 2rem;
+}
+
+
+li.main-contact-nav a {
+	margin-top: -2rem;
 	padding-top: 5.8rem;
 }
 
